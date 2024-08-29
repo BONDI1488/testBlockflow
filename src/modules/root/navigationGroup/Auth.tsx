@@ -2,6 +2,7 @@ import React from 'react';
 import {RouteKey} from 'src/core/typing/enums/navigator.ts';
 import {OnBoarding} from 'src/modules/auth/screens/OnBoarding.tsx';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {SignUp} from 'src/modules/auth/screens/SignUp.tsx';
 
 export const Auth = () => {
   const Stack = createNativeStackNavigator();
@@ -11,6 +12,7 @@ export const Auth = () => {
       initialRouteName="OnBoarding"
       screenOptions={{headerShown: false}}>
       <Stack.Screen name={RouteKey.OnBoarding} component={OnBoarding} />
+      <Stack.Screen name={RouteKey.SignUp} component={SignUp} />
     </Stack.Navigator>
   );
 };
