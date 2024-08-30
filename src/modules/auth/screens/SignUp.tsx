@@ -15,10 +15,18 @@ export const SignUp = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [error, setError] = useState('');
   const navigation: any = useNavigation();
 
   const Press = () => {
-    navigation.navigate(RouteKey.SignUpPhoneVerification);
+    console.log('name', name);
+    console.log('lastName', lastName);
+    console.log('phoneNumber', phoneNumber);
+    if (phoneNumber.length === 16) {
+      navigation.navigate(RouteKey.SignUpPhoneVerification);
+    } else {
+      setError('');
+    }
   };
   const handleNameChange = (text: string) => {
     setName(text);

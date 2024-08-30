@@ -7,9 +7,12 @@ import {PrimaryInputMask} from 'src/core/components/PrimaryInputMask.tsx';
 import {PrimaryButton} from 'src/core/components/PrimaryButton.tsx';
 import {checkEmptyStrings} from 'src/core/functions';
 import {ButtonText} from 'src/core/components/ButtonText.tsx';
+import {useNavigation} from '@react-navigation/native';
+import {RouteKey} from 'src/core/typing/enums/navigator.ts';
 
 export const SignIn = () => {
   const [phoneNumber, swtPhoneNumber] = useState('');
+  const navigation: any = useNavigation();
 
   const handlePhoneNumberChange = (text: string) => {
     swtPhoneNumber(text);
@@ -33,7 +36,7 @@ export const SignIn = () => {
       <PrimaryButton
         label={'Login'}
         onPress={() => {
-          console.log('askjd');
+          console.log('phoneNumber', phoneNumber);
         }}
         style={styles.primaryButton}
         isDesable={checkEmptyStrings(phoneNumber)}
@@ -43,7 +46,7 @@ export const SignIn = () => {
         <ButtonText
           label={'Sign up'}
           onPress={() => {
-            console.log('askjndnjka');
+            navigation.navigate(RouteKey.SignUp);
           }}
           fontSize={14}
         />
