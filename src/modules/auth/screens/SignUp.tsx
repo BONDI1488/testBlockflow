@@ -10,6 +10,7 @@ import {useNavigation} from '@react-navigation/native';
 import {RouteKey} from 'src/core/typing/enums/navigator.ts';
 import {PrimaryInputMask} from 'src/core/components/PrimaryInputMask.tsx';
 import {checkEmptyStrings} from 'src/core/functions';
+import { colors } from "src/core/typing/enums/colors.ts";
 
 export const SignUp = () => {
   const [name, setName] = useState('');
@@ -116,6 +117,7 @@ const styles = StyleSheet.create({
   h1Text: {
     marginTop: 120,
     alignSelf: 'center',
+    color: colors.black,
   },
   regularText: {
     color: 'rgba(102, 112, 133, 1)',

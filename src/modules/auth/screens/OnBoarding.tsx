@@ -7,6 +7,7 @@ import {Display3Text} from 'src/core/components/fonts/Display3Text.tsx';
 import {PlainText} from 'src/core/components/fonts/PlainText.tsx';
 import {useNavigation} from '@react-navigation/native';
 import {RouteKey} from 'src/core/typing/enums/navigator.ts';
+import { colors } from "src/core/typing/enums/colors.ts";
 
 export const OnBoarding = () => {
   const navigation: any = useNavigation();
@@ -52,9 +53,11 @@ const styles = StyleSheet.create({
   },
   display3Text: {
     marginTop: 55,
+    color: colors.black,
   },
   plainText: {
     marginTop: 16,
+    color: colors.black,
   },
   primaryButton: {
     marginTop: 32,

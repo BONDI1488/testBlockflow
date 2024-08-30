@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
   h1Text: {
     marginTop: 120,
     alignSelf: 'center',
+    color: colors.black,
   },
   regularText: {
     color: 'rgba(102, 112, 133, 1)',

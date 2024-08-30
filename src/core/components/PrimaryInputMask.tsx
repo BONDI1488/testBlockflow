@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     height: 40,
     paddingHorizontal: 14,
-    color: colors.grayForInput,
+    color: colors.black,
   },
   text: {
     backgroundColor: 'transparent',

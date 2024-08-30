@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     height: 40,
     paddingHorizontal: 14,
-    color: colors.grayForInput,
+    color: colors.black,
   },
   text: {
     backgroundColor: 'transparent',
@@ -68,4 +68,3 @@ const styles = StyleSheet.create({
     color: 'rgba(52, 64, 84, 1)',
   },
 });
-

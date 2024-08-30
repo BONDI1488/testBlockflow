@@ -9,6 +9,7 @@ import {checkEmptyStrings} from 'src/core/functions';
 import {ButtonText} from 'src/core/components/ButtonText.tsx';
 import {useNavigation} from '@react-navigation/native';
 import {RouteKey} from 'src/core/typing/enums/navigator.ts';
+import { colors } from "src/core/typing/enums/colors.ts";
 
 export const SignIn = () => {
   const [phoneNumber, swtPhoneNumber] = useState('');
@@ -44,7 +45,7 @@ export const SignIn = () => {
       <View style={styles.container}>
         <Text style={styles.textStyle}>Don’t have an account?</Text>
         <ButtonText
-          label={'Sign up'}
+          label={' Sign up'}
           onPress={() => {
             navigation.navigate(RouteKey.SignUp);
           }}
@@ -75,6 +76,7 @@ const styles = StyleSheet.create({
   h1Text: {
     marginTop: 120,
     alignSelf: 'center',
+    color: colors.black,
   },
   regularText: {
     color: 'rgba(102, 112, 133, 1)',
