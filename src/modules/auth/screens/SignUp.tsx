@@ -25,7 +25,7 @@ export const SignUp = () => {
     if (phoneNumber.length === 16) {
       navigation.navigate(RouteKey.SignUpPhoneVerification);
     } else {
-      setError('');
+      setError('wrong phone number');
     }
   };
   const handleNameChange = (text: string) => {
@@ -38,6 +38,7 @@ export const SignUp = () => {
 
   const handlePhoneNumberChange = (text: string) => {
     setPhoneNumber(text);
+    setError('');
   };
 
   return (
@@ -92,15 +93,20 @@ export const SignUp = () => {
           fontSize={14}
         />
       </View>
+      {error ? <Text style={styles.errorText}>{error}</Text> : null}
     </PrimaryWrapper>
   );
 };
 
 const styles = StyleSheet.create({
+  errorText: {
+    color: 'rgb(194,47,47)',
+    fontSize: 18,
+    alignSelf: 'center',
+  },
   container: {
     flexDirection: 'row',
     marginTop: 16,
-    flex: 1,
     justifyContent: 'center',
   },
   textStyle: {
