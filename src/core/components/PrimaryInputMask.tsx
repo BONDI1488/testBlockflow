@@ -3,13 +3,13 @@ import {
   KeyboardTypeOptions,
   StyleSheet,
   Text,
-  TextInput,
   View,
   ViewStyle,
 } from 'react-native';
+import {TextInputMask} from 'react-native-masked-text';
 import {colors} from 'src/core/typing/enums/colors.ts';
 
-interface PrimaryInput {
+interface PrimaryInputProps {
   value: string;
   onChangeText: (text: string) => void;
   placeholder: string;
@@ -18,9 +18,10 @@ interface PrimaryInput {
   keyboardType?: KeyboardTypeOptions;
   text: string;
   errorChecker?: string;
+  mask?: string;
 }
 
-export const PrimaryInput = ({
+export const PrimaryInputMask = ({
   value,
   onChangeText,
   style,
@@ -28,11 +29,16 @@ export const PrimaryInput = ({
   keyboardType,
   placeholder,
   text,
-}: PrimaryInput) => {
+  mask,
+}: PrimaryInputProps) => {
   return (
     <View style={style}>
       <Text style={styles.textStyle}>{text}</Text>
-      <TextInput
+      <TextInputMask
+        type={'custom'}
+        options={{
+          mask: mask || '',
+        }}
         value={value}
         onChangeText={onChangeText}
         style={[styles.input]}
@@ -68,4 +74,3 @@ const styles = StyleSheet.create({
     color: 'rgba(52, 64, 84, 1)',
   },
 });
-

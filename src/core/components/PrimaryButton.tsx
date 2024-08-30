@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text, TouchableOpacity, ViewStyle} from 'react-native';
-import {colors} from 'src/core/typing/enums/color.ts';
+import {colors} from 'src/core/typing/enums/colors.ts';
 
 interface ButtonProps {
   label: string;

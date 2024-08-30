@@ -5,8 +5,8 @@ import {PrimaryButton} from 'src/core/components/PrimaryButton.tsx';
 import {SecondaryButton} from 'src/core/components/SecondaryButton.tsx';
 import {Display3Text} from 'src/core/components/fonts/Display3Text.tsx';
 import {PlainText} from 'src/core/components/fonts/PlainText.tsx';
-import { useNavigation } from "@react-navigation/native";
-import { RouteKey } from "src/core/typing/enums/navigator.ts";
+import {useNavigation} from '@react-navigation/native';
+import {RouteKey} from 'src/core/typing/enums/navigator.ts';
 
 export const OnBoarding = () => {
   const navigation: any = useNavigation();
@@ -25,7 +25,7 @@ export const OnBoarding = () => {
       <PrimaryButton
         label={'Login'}
         onPress={() => {
-          console.log('sosi');
+          navigation.navigate(RouteKey.SignIn);
         }}
         style={styles.primaryButton}
       />
